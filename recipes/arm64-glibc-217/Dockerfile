@@ -1,7 +1,7 @@
 FROM centos:7
 
-ARG GID=1000
-ARG UID=1000
+ARG GID=20208
+ARG UID=20205
 
 RUN groupadd --gid $GID node \
     && adduser --gid $GID --uid $UID node
