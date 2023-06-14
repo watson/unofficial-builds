@@ -6,7 +6,7 @@ ARG UID=20205
 RUN groupadd --gid $GID node \
     && adduser --gid $GID --uid $UID node
 
-COPY cloudlinux.repo /etc/yum.repos.d/cloudlinux.repo
+# COPY cloudlinux.repo /etc/yum.repos.d/cloudlinux.repo
 
 RUN yum install -y epel-release \
     && yum upgrade -y \
