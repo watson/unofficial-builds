@@ -21,7 +21,7 @@ export CC="ccache gcc"
 export CXX="ccache g++"
 export MAJOR_VERSION=$(echo ${fullversion} | cut -d . -f 1 | tr --delete v)
 
-# . /opt/rh/devtoolset-9/enable
+. /opt/rh/devtoolset-9/enable
 
 make -j$(getconf _NPROCESSORS_ONLN) binary V= \
   DESTCPU="arm64" \
