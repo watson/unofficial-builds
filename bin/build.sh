@@ -44,17 +44,17 @@ echo "Starting build @ $(date)"
 
 sourcedir="${stagingdir}/src/${fullversion}"
 mkdir -p $sourcedir
-chmod 777 $sourcedir
+# chmod 777 $sourcedir
 echo "Created sourcedir: ${sourcedir}"
 sourcefile="${sourcedir}/node-${fullversion}.tar.xz"
 stagingoutdir="${stagingdir}/${disttype_promote}/${fullversion}"
 mkdir -p $stagingoutdir
-chmod 777 $stagingoutdir
+# chmod 777 $stagingoutdir
 echo "Created stagingoutdir: ${stagingoutdir}"
 distdir_promote="${distdir}/${disttype_promote}"
 distoutdir="${distdir_promote}/${fullversion}"
 mkdir -p $distoutdir
-chmod 777 $distoutdir
+# chmod 777 $distoutdir
 echo "Created distoutdir: ${distoutdir}"
 
 # Build fetch-source, needs to be the first and must succeed
@@ -72,7 +72,7 @@ for recipe in $recipes; do
   # - an output /out directory that puts generated assets into a staging directory
   ccachemount="-v ${ccachedir}/${recipe}/:/home/node/.ccache/"
   mkdir -p "${ccachedir}/${recipe}"
-  chmod 777 "${ccachedir}/${recipe}"
+  # chmod 777 "${ccachedir}/${recipe}"
   sourcemount="-v ${sourcefile}:/home/node/node.tar.xz"
   stagingmount="-v ${stagingoutdir}:/out"
 
