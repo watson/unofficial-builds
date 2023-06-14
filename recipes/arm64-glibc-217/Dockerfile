@@ -1,6 +1,6 @@
 FROM centos:7
 
-ARG GID=20208
+ARG GID=1045
 ARG UID=20205
 
 RUN groupadd --gid $GID node \

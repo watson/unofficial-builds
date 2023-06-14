@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-ARG GID=20208
-ARG UID=20205
+ARG GID=1045
+ARG UID=1044
 
 RUN addgroup -g $GID node \
     && adduser -u $UID -G node -s /bin/sh -D node
