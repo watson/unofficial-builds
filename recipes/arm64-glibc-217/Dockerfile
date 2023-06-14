@@ -9,6 +9,7 @@ RUN groupadd --gid $GID node \
 # COPY cloudlinux.repo /etc/yum.repos.d/cloudlinux.repo
 
 RUN yum install -y epel-release \
+    && yum install -y centos-release-scl-rh \
     && yum upgrade -y \
     && yum install -y \
          git \
