@@ -1,4 +1,0 @@
-[cloudlinux-sclo-devtoolset-9]
-name=Cloudlinux devtoolset-9
-baseurl=https://yum.oracle.com/repo/OracleLinux/OL7/SoftwareCollections/aarch64/
-gpgcheck=0
